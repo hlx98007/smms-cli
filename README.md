@@ -40,7 +40,8 @@ This will search for all your historical upload for `*scr*` in the original file
 
 list
 ---
-List all your images you've uploaded (not deleted via this cli)
+List all your images you've uploaded which has not been deleted via this cli
+tool.
 
 delete
 ---
