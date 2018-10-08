@@ -6,7 +6,8 @@ Required: Python Version 3.4 or above, tested under Linux, use requests module
 Description
 ---
 
-A tool for SM.MS Image Hosting API
+A tool for SM.MS Image Hosting API. It uses sqlite3 as a database under your
+home folder. The DB file generated is called .smms.sqlite3.
 
 Example usage:
 ---
