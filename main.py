@@ -74,20 +74,21 @@ def upload(cur, files):
         else:
             print("File not found locally", file=sys.stderr)
 
-def find(cur, pattern):
+def find(cur, patterns):
     """
     Find a pattern in the database from file_name
     """
-    if pattern is None:
+    if patterns is None:
         print("No file specified", file=sys.stderr)
         return
 
-    cur.execute("SELECT rowid, file_name, url, delete_url FROM smms WHERE file_name\
-            LIKE '%%%s%%'")
-    items = cur.fetchall()
+    for pattern in patterns:
+        cur.execute("SELECT rowid, file_name, url, delete_url FROM smms WHERE file_name\
+                LIKE '%%%s%%'" % (pattern))
+        items = cur.fetchall()
 
-    for item in items:
-        print(str(item[0]) + " " + item[1] + " " + item[2] + " " + item[3])
+        for item in items:
+            print(str(item[0]) + " " + item[1] + " " + item[2] + " " + item[3])
 
 
 def delete(cur, image_ids):
