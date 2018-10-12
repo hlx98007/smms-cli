@@ -56,6 +56,7 @@ def upload(cur, files):
     api_url = "https://sm.ms/api/upload"
 
     for fil in files:
+        print("Uploading %s" % (fil))
         files = {'smfile': open(fil, 'rb')}
         r = rq.post(api_url, files=files)
         jf = json.loads(r.text)
@@ -71,6 +72,7 @@ def upload(cur, files):
             print("Success!")
             print("Image URL: " + url)
             print("Image Delete URL: " + delete)
+            print()
         else:
             print("File not found locally", file=sys.stderr)
 
