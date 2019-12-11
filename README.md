@@ -24,7 +24,7 @@ API reference: https://sm.ms/doc/
 
 Install
 ---
-sudo cp main.py /usr/local/bin/smms
+sudo cp smms /usr/local/bin/smms
 
 
 upload
