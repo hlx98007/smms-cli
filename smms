@@ -57,8 +57,8 @@ def upload(cur, files):
 
     for fil in files:
         print("Uploading %s" % (fil))
-        files = {'smfile': open(fil, 'rb')}
-        r = rq.post(api_url, files=files)
+        myfile = {'smfile': open(fil, 'rb')}
+        r = rq.post(api_url, files=myfile)
         jf = json.loads(r.text)
         if jf['code'] == 'success':
             # 1. Write to database
