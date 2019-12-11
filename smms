@@ -8,7 +8,7 @@
 #   smms list
 #   smms delete [id]
 #   smms help
-#   smms history [clean]
+#   smms history [clear]
 #
 # API reference: https://sm.ms/doc/
 
@@ -146,8 +146,8 @@ def print_help():
     To find a file original file name is a.jpg
         smms find a.jpg
 
-    To print a list of uploaded files in the past hour, or to clean it
-        smms history [clean]
+    To print a list of uploaded files in the past hour, or to clear it
+        smms history [clear]
     """
     print(helptext)
 
